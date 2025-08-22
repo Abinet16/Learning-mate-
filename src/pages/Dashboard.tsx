@@ -12,7 +12,6 @@ import {
   Calendar,
   Target,
   Flame,
-  Star,
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { getFromStorage, setToStorage } from '../utils/storage';
