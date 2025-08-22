@@ -13,7 +13,7 @@
 
 1. **Clone the repository:**
   ```bash
-  git clone https://github.com/Abinet16/Learning-mate/StudyMate.git
+  git clone [https://github.com/Abinet16/Learning-mate-.git]
   ```
 2. **Install dependencies:**
   ```bash
