@@ -29,9 +29,5 @@
 
 Contributions are welcome! Please open issues or submit pull requests for improvements.
 
-## License
 
-This project is licensed under the MIT License.
-
----
-Empower your learning with StudyMate!
+Empower your learning with LearningMate!
