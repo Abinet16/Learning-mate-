@@ -1,3 +1,9 @@
+type StudyStreak = {
+  currentStreak: number;
+  bestStreak: number;
+  lastStudyDate: string | number | Date;
+};
+
 export default function StudyStreakComponent({ streak }: { streak: StudyStreak }) {
   return (
     <div className="p-6 rounded-2xl shadow-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white">
