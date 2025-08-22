@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { StudentProfile } from '../types';
-import { Trophy, User, Bell, Volume2, Save, Camera, Edit3, Target, Clock, BookOpen } from 'lucide-react';
+import { Trophy, User, Bell, Volume2, Save, Camera, Edit3, Target, BookOpen } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { getFromStorage, setToStorage } from '../utils/storage';
 import LoadingSpinner from '../components/LoadingSpinner';
