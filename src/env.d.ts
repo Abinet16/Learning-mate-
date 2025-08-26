@@ -1,4 +1,4 @@
-/// <reference types="vite/client" />
+/// <reference types="vite/client || https://learning-mate-mu.vercel.app/" />
 
 interface ImportMetaEnv {
   readonly VITE_SUPABASE_URL: string;
