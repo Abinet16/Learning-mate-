@@ -1,1 +1,1 @@
-/// <reference types="vite/client" />
+/// <reference types="https://learning-mate-mu.vercel.app/" />
