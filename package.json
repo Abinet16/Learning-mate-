@@ -1,10 +1,10 @@
 {
-  "name": "@mintahandrews/studymate",
+  "name": "@AbenetMu/learning mate",
   "version": "0.0.0",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mintahandrews/StudyMate.git"
+    "url": "https://github.com/Abinet16/Learning-mate-.git"
   },
   "scripts": {
     "dev": "vite",

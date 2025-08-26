@@ -31,6 +31,7 @@ export default function TaskForm({ onSubmit, onClose, initialData, subjects = []
     const formattedData = {
       ...formData,
       dueDate: new Date(formData.dueDate).toISOString(),
+      createdAt: initialData?.createdAt || new Date().toISOString(),
     };
 
     onSubmit(formattedData);

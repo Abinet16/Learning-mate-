@@ -43,24 +43,22 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen flex bg-gradient-to-br from-gray-50 via-white to-gray-100">
-        {/* Sidebar */}
-        {user && (
-          <motion.div
-            initial={{ x: -80, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="hidden md:block fixed top-0 left-0 h-full z-20"
-          >
-            <Navbar />
-          </motion.div>
-        )}
+      {/* Always mount Navbar when logged in.
+          Navbar itself handles: mobile bottom bar + desktop sidebar (fixed). */}
+      {user && <Navbar />}
 
+      <div className="min-h-screen flex bg-gradient-to-br from-gray-50 via-white to-gray-100">
         {/* Main Content */}
         <main
           className={`flex-1 transition-all duration-300 ${
-            user ? "px-4 py-8 md:px-8 lg:px-12 md:ml-64" : ""
+            user
+              ? // On mobile: add bottom padding so content never hides behind bottom navbar.
+                // On desktop: shift content to the right of the 256px sidebar.
+                "px-4 pt-4 pb-24 md:py-8 md:px-8 lg:px-12 md:ml-64"
+              : ""
           }`}
+          // Extra safe-area for iOS devices with home indicator.
+          style={user ? { paddingBottom: "calc(6rem + env(safe-area-inset-bottom))" } : undefined}
         >
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
@@ -175,11 +173,13 @@ function App() {
         initial={{ scale: 0.8, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
+        // Nudge up a bit so it doesn't sit under the mobile navbar.
+        className={user ? "mb-24 md:mb-0" : ""}
       >
         <SocialWidget />
       </motion.div>
 
-      {/* Toast Notifications */}
+      {/* Toast Notifications (lifted above mobile navbar) */}
       <Toaster
         position="bottom-right"
         toastOptions={{
@@ -198,7 +198,8 @@ function App() {
           },
         }}
         containerStyle={{
-          bottom: 40,
+          // More breathing room when the user has a bottom navbar
+          bottom: user ? 96 : 40,
           right: 40,
         }}
       />

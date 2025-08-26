@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Bot, Upload, Mic, StopCircle, Loader2, Save, Copy, Check, MessageSquare, FileText, MicOff, Sparkles } from 'lucide-react';
+import { Bot, Upload, Mic, StopCircle, Loader2, Save, Copy, Check, MessageSquare, FileText, Sparkles } from 'lucide-react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import mammoth from 'mammoth';
 import * as pdfjsLib from 'pdfjs-dist';
