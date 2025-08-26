@@ -13,7 +13,7 @@
 
 1. **Clone the repository:**
   ```bash
-  git clone https://github.com/Abinet16/Learning-mate/StudyMate.git
+  git clone [https://github.com/Abinet16/Learning-mate-.git]
   ```
 2. **Install dependencies:**
   ```bash
@@ -29,9 +29,5 @@
 
 Contributions are welcome! Please open issues or submit pull requests for improvements.
 
-## License
 
-This project is licensed under the MIT License.
-
----
-Empower your learning with StudyMate!
+Empower your learning with LearningMate!
